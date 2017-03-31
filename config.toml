@@ -1,4 +1,4 @@
-baseurl = ""
+baseurl = "/"
 title = "Prasanna's blog"
 author = "Prasanna Santhanam"
 canonifyurls = true
