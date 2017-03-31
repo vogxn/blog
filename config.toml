@@ -1,0 +1,27 @@
+baseurl = "https://v0g0n.org/blog"
+title = "Prasanna's blog"
+author = "Prasanna Santhanam"
+canonifyurls = true
+languagecode = "en"
+theme = "black-and-light"
+
+pygmentsstyle       = "bw"
+pygmentscodefences  = true
+
+[params]
+  sitename = "Prasanna's Blog"
+  GitHubUser = "vogxn"
+
+[permalinks]
+  post = "/:year/:month/:title/"
+
+[[menu.main]]
+    name = "About"
+    url  = "about/index.html"
+[[menu.main]]
+    name = "Resumé"
+    url  = "resumé/index.html"
+[[menu.main]]
+    name = "Projects"
+    url  = "https://github.com/vogxn"
+
