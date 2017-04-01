@@ -23,9 +23,7 @@ _Qubole, Big Data as a Service  (Dec 2013-Feb 2017)_
 
 At Qubole, I laid the foundations of the testing team and acted as tech lead
 and individual contributor. I’ve contributed extensively in the test, tools and
-devops nature of the platform. My profiency lies in creating long term designs
-and taking timely decisions to evolve the testing process to deliver a great
-platform at a lightning pace. In my IC role, I’ve been involved in development
+devops nature of the platform. In my IC role, I’ve been involved in development
 of build tools, deploy tools, continuous integration and test frameworks. As a
 mentor I’ve managed a small team of 5 test engineers, helped documentation
 efforts, release management and a bit of product management as well.
@@ -35,13 +33,13 @@ _Citrix Systems/Apache CloudStack/Cloud.com  (Dec 2010-Dec 2013)_
 
 At cloud.com I engineered and laid the foundations for the testing of Apache
 CloudStack. I’ve done everything from developing custom test frameworks to
-innovative patent-worthy approaches for testing large scale infrastructure
-systems. For the Apache CloudStack project I helped setup the public facing
-automatic test infrastructure that runs several complex integration tests on an
-automatically deployed live system. The system is a critical stability
-indicator of releases at Apache CloudStack. At Citrix and in the Apache
-community I’ve also mentored engineers (experienced and rookie) in software
-engineering practices and technology adoption.
+innovative approaches for testing large scale infrastructure systems. For the
+Apache CloudStack project I helped setup the public facing automatic test
+infrastructure that runs several complex integration tests on an automatically
+deployed live system. The system is a critical stability indicator of releases
+at Apache CloudStack. At Citrix and in the Apache community I’ve also mentored
+engineers (experienced and rookie) in software engineering practices and
+technology adoption.
 
 ### Software Engineer
 _S&P Capital IQ, McGraw Hill Financial (Jun 2008-Dec 2010)_
