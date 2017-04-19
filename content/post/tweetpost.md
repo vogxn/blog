@@ -35,7 +35,7 @@ built more command line driven tools over the years and have lost touch with
 the web.
 
 My pet project was very simple, in fact, it wasn't even something novel. But
-what the heck? I wanted to build it with Go. And hence we have Tweetpost.
+what the heck? I wanted to build it with Go. And hence we have [Tweetpost](https://github.com/vogxn/tweetpost.git).
 Tweetpost is yet another of those online tools to help you rant on the internet
 via your Twitter account. In that sense it's probably a poor version of
 [Tweetstorm](http://tweetstorm.io).
@@ -158,5 +158,6 @@ eros."}'  http://localhost:8080/post | jq .
 It looks prettier when rendered on the browser.
 {{< figure src="/img/tweetpost.png" >}}
 
+Checkout the project on github - [Tweetpost](https://github.com/vogxn/tweetpost.git).
 
 
