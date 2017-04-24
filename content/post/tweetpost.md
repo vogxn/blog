@@ -115,15 +115,56 @@ and toolkits for the purpose. I picked something simple however.
 - **Routing**: For routing and the REST API I used [httprouter](https://github.com/julienschmidt/httprouter) for its simplicity
 - **Response/Templates**: `net/http` for response writing with minimum use of `html/template`
 - **Client Side**: [Bootstrap](https://getbootstrap.com) and jQuery
+- **Configuration**: Configuration is read and managed by [Viper](https://github.com/spf13/viper)
+- **OAuth**: Twitter OAuth is _attempted_ using [`mrjones/oauth`](https://github.com/mrjones/oauth)
 
-By far the most time consuming part for me was getting through jQuery and then
-through bootstrap. TBH I've never really written these from scratch but I'm
-glad I got digging and spent the time. Bootstrap seems amazing for creating
-beautiful content.
+I've structured my MVC layout as shown. There may be many ways to do this but
+the split I've used is such that each package is self-contained and performs
+all the functions in a single area. For eg: all the authorization with OAuth is
+done in the `auth` package. Page views are handled in the `views` package and
+routing in the `controllers` package
 
-The app itself is straightforward with a single REST `/post` endpoint that
-returns `JSON` content. jQuery then uses bootstrap templates to render the
-split content.
+```
+server
+├── auth
+│   └── credentials.go
+├── config
+│   └── settings.yaml
+├── controllers
+│   ├── post.go
+│   └── static.go
+├── main.go
+├── static
+│   ├── css
+│   ├── favicons
+│   └── js
+├── templates
+│   └── layouts
+│       ├── content.tmpl
+│       ├── footer.tmpl
+│       ├── header.tmpl
+└── views
+    └── page.go
+```
+
+You can start the web app by running `server/main.go`. All the configuration is
+read from the `config` directory where I store the OAuth keys. The
+`auth` package encapsulates the `TwitterAuth` type which is a reductive
+type from the full blown set of details needed for OAuth. After performing the
+OAuth dance an `HttpClient` is created with which you can access the Twitter API.
+
+The two routes that are exposed by the REST API are `/split` and `/tweet`.
+`split` will break down the text into tweets using the `ScanTweets(..)`
+function while `tweet` is expected to perform OAuth and post the tweets.
+Currently twitter OAuth is broken so this is not supported. But the necessary
+OAuth workflow is present in the `auth/credentials.go` file.
+
+_Note: The app is incomplete because Twitter's 3-legged authorization is broken._ [^twitterbrokenoauth]
+
+[^twitterbrokenoauth]: Twitter authorization fails [CORS preflight](http://stackoverflow.com/q/35879943/1297846) in a browser
+
+
+Following shows a simple cURL call to break down tweet text.
 
 ```Bash
 ➜  ~ curl -sL -X POST --data '{ "text": "Lorem ipsum dolor sit amet,
@@ -155,9 +196,12 @@ eros."}'  http://localhost:8080/post | jq .
 ]
 ```
 
-It looks prettier when rendered on the browser.
+Here's a screenshot of the application.
 {{< figure src="/img/tweetpost.png" >}}
 
-Checkout the project on github - [Tweetpost](https://github.com/vogxn/tweetpost.git).
+Checkout the project on github -
+[Tweetpost](https://github.com/vogxn/tweetpost.git). Since this is my first Go
+webapp, I welcome comments and feedback on whether I've stuck to Idiomatic Go
+syntax and convention.
 
 
