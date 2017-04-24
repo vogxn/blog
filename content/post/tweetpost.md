@@ -5,10 +5,7 @@ tags = ['tweetpost', 'golang', 'webapp']
 
 +++
 
-I've spent the last month going through the fundamentals of building
-applications in Go. This is a blog post about what I learned.
-
-I was first exposed to the language back in 2013 when I was working with [Apache
+I was first exposed to the Go language back in 2013 when I was working with [Apache
 Cloudstack](https://cloudstack.apache.org/). At the time, I was using [Mitchell
 Hashimoto's](https://github.com/mitchellh)
 [Packer](https://github.com/hashicorp/packer) for spinning up images in AWS.
