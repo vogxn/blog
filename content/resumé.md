@@ -7,7 +7,7 @@ title = "Resumé"
 - - -
 
 Software engineer with 8 years of industry experience with focus on test and
-devops tech stacks. I am deeply interested in cloud infrastructure, large scale
+devops tech stacks. I am deeply interested in cloud infrastructure, distributed 
 systems, and application development for cloud architectures. I have experience
 in a diverse set of techonologies and have solved problems in various areas
 including development, testing, scalability and operations. I’m currently
