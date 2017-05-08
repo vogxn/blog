@@ -4,7 +4,6 @@ author = "Prasanna Santhanam"
 canonifyurls = true
 languagecode = "en"
 theme = "black-and-light"
-disqusShortname = "vogxn"
 
 pygmentsstyle       = "bw"
 pygmentscodefences  = true
